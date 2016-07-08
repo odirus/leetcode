@@ -1,0 +1,1 @@
+SELECT Id FROM (SELECT t1.*, t2.Temperature as `PreTemperature` FROM Weather t1 LEFT JOIN Weather t2 ON SUBDATE(t1.`Date`,INTERVAL 1 DAY) = t2.`Date`) temp WHERE temp.`Temperature` > temp.`PreTemperature`
