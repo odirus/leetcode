@@ -16,26 +16,28 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `Person`
+-- Table structure for table `Address`
 --
 
-DROP TABLE IF EXISTS `Person`;
+DROP TABLE IF EXISTS `Address`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `Person` (
-  `Id` int(11) NOT NULL,
-  `Email` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+CREATE TABLE `Address` (
+  `AddressId` int(11) NOT NULL,
+  `PersonId` int(11) NOT NULL,
+  `City` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `State` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`AddressId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `Person`
+-- Dumping data for table `Address`
 --
 
-LOCK TABLES `Person` WRITE;
-/*!40000 ALTER TABLE `Person` DISABLE KEYS */;
-INSERT INTO `Person` VALUES (1,'a@b.com'),(2,'c@d.com'),(3,'a@b.com');
-/*!40000 ALTER TABLE `Person` ENABLE KEYS */;
+LOCK TABLES `Address` WRITE;
+/*!40000 ALTER TABLE `Address` DISABLE KEYS */;
+/*!40000 ALTER TABLE `Address` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -47,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-07-08  9:41:29
+-- Dump completed on 2016-07-08  9:55:56

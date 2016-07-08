@@ -16,29 +16,27 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `Employee`
+-- Table structure for table `Person`
 --
 
-DROP TABLE IF EXISTS `Employee`;
+DROP TABLE IF EXISTS `Person`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `Employee` (
-  `ID` int(11) NOT NULL,
-  `Name` varchar(255) NOT NULL,
-  `Salary` int(11) NOT NULL,
-  `ManagerId` int(11) DEFAULT NULL,
-  PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE `Person` (
+  `PersonId` int(11) NOT NULL,
+  `FirstName` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `LastName` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`PersonId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `Employee`
+-- Dumping data for table `Person`
 --
 
-LOCK TABLES `Employee` WRITE;
-/*!40000 ALTER TABLE `Employee` DISABLE KEYS */;
-INSERT INTO `Employee` VALUES (1,'Joe',70000,3),(2,'Henry',80000,4),(3,'Sam',60000,NULL),(4,'Max',90000,NULL);
-/*!40000 ALTER TABLE `Employee` ENABLE KEYS */;
+LOCK TABLES `Person` WRITE;
+/*!40000 ALTER TABLE `Person` DISABLE KEYS */;
+/*!40000 ALTER TABLE `Person` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -50,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-07-07 18:06:43
+-- Dump completed on 2016-07-08  9:55:45
